@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muo Gabriel Paul | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --card: #ffffff;
+    }
+
+    body.dark {
+      --bg: #020617;
+      --text: #e2e8f0;
+      --card: #0f172a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ✅ YOUR HEADER (UNCHANGED) */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255,255,255,0.8);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .header-text { max-width: 500px; }
+
+    .header-text h1 { font-size: 2.5rem; }
+
+    .socials {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      background: white;
+      color: #4f46e5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background: rgba(0,0,0,0.7);
+      position: sticky;
+      top: 0;
+    }
+
+    nav a { color: white; text-decoration: none; }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.6s;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    form {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .toggle {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleDark()">🌙</div>
+
+<header>
+  <img src="profile.jpg" class="profile-pic">
+
+  <div class="header-text">
+    <h1>Muo Gabriel Paul</h1>
+    <p>Data Analyst | Researcher | Bioinformatics Enthusiast</p>
+
+    <a href="cv.pdf" download>
+      <button style="margin-top:10px;">Download CV</button>
+    </a>
+
+    <div class="socials">
+      <a href="https://github.com/MG-Paul" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/muo-gabriel-o769567826/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<!-- ✅ BORROWED SECTIONS (UNCHANGED CONTENT) -->
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>I am a budding Kenyan researcher in the healthcare industry with keen interests in bioinformatics, immunology of infectious diseases, immunoinformatics, and immunobiology. I hold a Bachelor's degree in Medical Laboratory Sciences from Moi University and a postgraduate diploma in Health Research Methods from Pwani University and The KEMRI-Wellcome Trust Research Programme.</p>
+</section>
+
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">R Meta-analysis Project</div>
+    <div class="card">Biomarker Visualization</div>
+    <div class="card">Data Dashboard</div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Me</h2>
+
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p id="status"></p>
+</section>
+
+</div>
+
+<footer>
+  <p>© 2026 Muo Gabriel Paul</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function(){ emailjs.init("Tpm59PpZJJxCayL0w"); })();
+
+  function toggleDark() { document.body.classList.toggle("dark"); }
+
+  const sections = document.querySelectorAll('.section');
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      if(window.scrollY > sec.offsetTop - 400) sec.classList.add('show');
+    });
+  });
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_wouvjv5","template_xbjekt5", this)
+    .then(() => {
+      document.getElementById("status").innerText = "✅ Message sent successfully!";
+    }, () => {
+      document.getElementById("status").innerText = "❌ Failed to send message.";
+    });
+
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
