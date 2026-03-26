@@ -206,6 +206,7 @@
   <a href="#skills">Skills</a>
   <a href="#research">Research</a>
   <a href="#projects">Projects</a>
+  <a href="#work">Sample Work</a>
   <a href="#experience">Education</a>
   <a href="#achievements">Achievements</a>
   <a href="#contact">Contact</a>
@@ -232,7 +233,7 @@
   <h2>Research & Publications</h2>
   <div class="card">
     <h3>A Review of Biomarkers of Environmental Enteric Dysfunction in Low- and Middle-Income Countries</h3>
-    <p>Meta-synthesis of the distribution of concentrations of biomarkers of environmental enteric dysfunction among children under 5 years in the LMICs.</p>
+    <p>Meta-synthesis of biomarker distribution among children under 5 in LMICs.</p>
     <p><strong>Tools:</strong> R, Python</p>
   </div>
 </section>
@@ -242,16 +243,36 @@
   <div class="projects">
     <div class="card">
       <h3>Forest Plot visualisations in R</h3>
-      <p>Analyzed EED biomarker data across multiple studies in the LMICs.</p>
+      <p>Analyzed EED biomarker data across multiple studies.</p>
     </div>
     <div class="card">
       <h3>Biomarker Visualization</h3>
-      <p>Created forest plots illustrating distribution of the biomarkers of gut inflammation, permeability, absorption, and systemic immune activation markers.</p>
+      <p>Created forest plots for gut biomarkers.</p>
     </div>
     <div class="card">
       <h3>Data Dashboard</h3>
       <p>In progress.</p>
     </div>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <h2>Sample Work</h2>
+
+  <div class="card">
+    <h3>Postgraduate Diploma Thesis</h3>
+    <p>Biomarkers of Environmental Enteric Dysfunction in LMICs.</p>
+    <a href="thesis.pdf#toolbar=0" target="_blank">
+      <button>View Thesis</button>
+    </a>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h3>Research Poster</h3>
+    <p>Summary of findings.</p>
+    <a href="poster.pdf#toolbar=0" target="_blank">
+      <button>View Poster</button>
+    </a>
   </div>
 </section>
 
@@ -261,25 +282,17 @@
     <p><strong>BSc Medical Laboratory Sciences</strong> - <a href="https://www.mu.ac.ke/" target="_blank">Moi University</a></p>
   </div>
   <div class="card">
-    <p><strong>Postgraduate Diploma in Health Research Methods</strong> - <a href="https://www.pu.ac.ke/" target="_blank">Pwani University</a> & 
+    <p><strong>Postgraduate Diploma</strong> - <a href="https://www.pu.ac.ke/" target="_blank">Pwani University</a> & 
       <a href="https://kemri-wellcome.org/" target="_blank">KEMRI-Wellcome Trust</a></p>
   </div>
-  <div class="card">
-  <p><strong>Kenya Certificate of Secondary Education</strong> - Maseno School</p>
 </section>
 
 <section id="achievements" class="section">
   <h2>Achievements</h2>
   <div class="card">
-    <p>✔ <a href="https://ideal.kemri-wellcome.org/" target="_blank">IDEAL Studentship</a></p>
+    <p>✔ IDEAL Studentship</p>
     <p>✔ KEMRI-Wellcome Trust Training</p>
-    <p>✔ Research Methods Certification</p>
   </div>
-</section>
-
-<section class="section">
-  <h2>Let’s Work Together</h2>
-  <p>I am open to research collaborations, data analysis roles, and bioinformatics opportunities.</p>
 </section>
 
 <section id="contact" class="section">
@@ -326,6 +339,15 @@
     });
 
     this.reset();
+  });
+
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && e.key === 'p') || (e.ctrlKey && e.key === 's')) {
+      e.preventDefault();
+      alert("Action disabled");
+    }
   });
 </script>
 
